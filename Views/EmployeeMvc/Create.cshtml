@@ -1,0 +1,31 @@
+@model WorksAway.Models.Employee
+<!-- Page Background Color -->
+<style>
+    body {
+        background-color: #DBCDA0;
+    }
+</style>
+<h2 class="text-center" style="font-family: 'Georgia', serif; font-size: 2.5rem; color: #000000; font-weight: bold;">
+    Create New Employee
+</h2>
+
+<div class="container mt-5">
+    <div class="card shadow-sm p-4 rounded" style="background-color: #ffffff; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); border-radius: 15px;">
+        <form asp-action="Create" method="post">
+            <div class="form-group">
+                <label asp-for="Name" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: #000000;">Name</label>
+                <input asp-for="Name" class="form-control" style="border-radius: 8px; font-size: 1rem; padding: 0.75rem;" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: #000000;">Email</label>
+                <input asp-for="Email" class="form-control" style="border-radius: 8px; font-size: 1rem; padding: 0.75rem;" />
+            </div>
+            <button type="submit" class="btn btn-success" style="border-radius: 8px; padding: 0.5rem 1.5rem; font-size: 1.1rem; background-color: #6F8C7B; color: white;">
+                Create
+            </button>
+            <a asp-action="Index" class="btn btn-secondary" style="border-radius: 8px; padding: 0.5rem 1.5rem; font-size: 1.1rem; background-color: #D1D8DC;">
+                Cancel
+            </a>
+        </form>
+    </div>
+</div>

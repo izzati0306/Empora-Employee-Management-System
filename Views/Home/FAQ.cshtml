@@ -1,0 +1,85 @@
+@{
+    ViewData["Title"] = "FAQ";
+}
+<!-- Page Background Color -->
+<style>
+    body {
+        background-color: #DBCDA0;
+    }
+</style>
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h2 style="font-family: 'Georgia', serif; font-size: 2.5rem; color: #000000; font-weight: bold;">
+            Frequently Asked Questions (FAQ)
+        </h2>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: #000000; max-width: 700px; margin: 0 auto;">
+            Here you will find answers to the most commonly asked questions. If you don't find the information you're looking for, feel free to contact us for more details.
+        </p>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+        <!-- Question 1 -->
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #000000;">
+                        What services do you offer?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                <div class="card-body" style="font-family: 'Arial', sans-serif; font-size: 1rem; color: #000000;">
+                    We offer a wide range of services, including consulting, project management, IT solutions, and customer support. Our goal is to provide tailored solutions that meet the unique needs of each client.
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #000000;">
+                        Is my data secure?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                <div class="card-body" style="font-family: 'Arial', sans-serif; font-size: 1rem; color: #000000;">
+                    Information on Empora are secured to protect clients' and users.
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #000000;">
+                        Is there a mobile app for Empora?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                <div class="card-body" style="font-family: 'Arial', sans-serif; font-size: 1rem; color: #000000;">
+                    We are working on developing mobile apps for iOS and Android to give users the flexibility of managing employee data on the go. For now, you can access Empora through any modern browser on your desktop or mobile device.
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #000000;">
+                        Can I integrate with other tools or software?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                <div class="card-body" style="font-family: 'Arial', sans-serif; font-size: 1rem; color: #000000;">
+                    No, our platform currently does not offer integration capabilities with third-party systems or API access. We focus on providing a standalone, user-friendly experience, but we are exploring future updates to expand functionality.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

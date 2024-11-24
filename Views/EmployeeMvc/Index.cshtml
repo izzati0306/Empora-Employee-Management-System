@@ -1,0 +1,46 @@
+@model IEnumerable<WorksAway.Models.Employee>
+<!-- Page Background Color -->
+<style>
+    body {
+        background-color: #DBCDA0;
+    }
+</style>
+<h1 class="text-center" style="font-family: 'Georgia', serif; font-size: 3rem; color: #000000; font-weight: bold;">
+    Employee List
+</h1>
+
+<div class="container mt-5">
+    <!-- Add New Employee Button -->
+    <div class="text-center mb-4">
+        <a asp-action="Create" class="btn btn-primary" style="background-color: #2d4c39; border-radius: 8px; font-size: 1.1rem; padding: 0.5rem 1.5rem;">
+            Add New Employee
+        </a>
+    </div>
+
+    <!-- Employee List Table -->
+    <div class="card shadow-sm p-4 rounded" style="background-color: #ffffff; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); border-radius: 15px;">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #000000;">Name</th>
+                    <th style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #000000;">Email</th>
+                    <th style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #000000;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employee in Model)
+                {
+                    <tr>
+                        <td style="font-size: 1.1rem; color: #000000;">@employee.Name</td>
+                        <td style="font-size: 1.1rem; color: #000000;">@employee.Email</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@employee.EmployeeID" class="btn btn-warning" style="border-radius: 8px; padding: 0.3rem 1rem; font-size: 1rem; background-color: #FFC107; color: white;">Edit</a> 
+                            |
+                            <a asp-action="Delete" asp-route-id="@employee.EmployeeID" class="btn btn-danger" style="border-radius: 8px; padding: 0.3rem 1rem; font-size: 1rem; background-color: #DC3545; color: white;">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

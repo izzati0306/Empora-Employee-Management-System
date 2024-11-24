@@ -1,0 +1,39 @@
+@model WorksAway.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Admin Login";
+}
+<!-- Page Background Color -->
+<style>
+    body {
+        background-color: #DBCDA0;
+    }
+</style>
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-lg p-5 rounded" style="max-width: 800px; min-width: 600px; background-color: #ffffff; color: #000000; border-radius: 15px; box-shadow: 0 4px 10px rgba(218, 218, 218, 0.884);">
+        @if (Model != null)
+        {
+            <h2 class="text-center mb-4" style="font-family: 'Georgia', serif; font-size: 2.4rem; color: #000000; font-weight: bold;">@ViewData["Title"]</h2>
+
+            <form method="post">
+                <div class="form-group mb-4">
+                    <label for="Email" style="font-family: 'Arial', sans-serif; font-size: 1.2rem; color: #000000;">Email</label>
+                    <input type="email" id="Email" name="Email" class="form-control" value="@Model.Email" required style="font-size: 1.1rem; padding: 0.8rem; border-radius: 8px;"/>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="Password" style="font-family: 'Arial', sans-serif; font-size: 1.2rem; color: #000000;">Password</label>
+                    <input type="password" id="Password" name="Password" class="form-control" value="@Model.Password" required style="font-size: 1.1rem; padding: 0.8rem; border-radius: 8px;"/>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" style="font-size: 1rem; padding: 0.8rem; background-color: #2d4c39; border-radius: 8px; color: #ffffff; font-weight: bold;">
+                    Login
+                </button>
+            </form>
+        }
+        else
+        {
+            <p style="color: #FF6B6B; text-align: center;">Error: The model is null.</p>
+        }
+    </div>
+</div>
